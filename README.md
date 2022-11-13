@@ -14,7 +14,7 @@ The options are described below.
 
 To compile this test, run:
 
-  make regular_blockchain
+  `make regular_blockchain`
 
 And then run the executable "blockchain" . The program will generate
 1MB random blocks and compute its SHA256 hash twice (computing the
@@ -26,7 +26,7 @@ classical blockchain, like the Bitcoin blockchain, with 1MB blocks.
 
 To compile this test, run:
 
-  make classical_redactable_blockchain
+  `make classical_redactable_blockchain`
 
 And then run the executable "classical_redactable_blockchain". This
 program will create random 1MB blocks and will compute how long it
@@ -46,7 +46,7 @@ long it takes to redact a block using that construction.
 
 To compile this test, run:
 
-  make secret_coin_redactable_blockchain
+  `make secret_coin_redactable_blockchain`
 
 And then run the executable "secret_coin_redactable_blockchain". This
 program will compute random 1MB blocks and will compute how long it
@@ -67,7 +67,7 @@ to verify and redact a block using that construction.
 
 To compile this test, run:
 
-  make factoring_preimage_blockchain
+  `make factoring_preimage_blockchain`
 
 And then run the executable "factoring_preimage_blockchain". This
 program will compute random 1MB blocks and will compute how long it
@@ -87,7 +87,7 @@ long it takes to redact a block using this construction.
 
 To compile this test, run:
 
-  make preimage_blockchain_small_primes
+  `make preimage_blockchain_small_primes`
 
 And then run the executable "preimage_blockchain_small_primes". This
 will run the same test from the previous section based on Factoring
@@ -100,7 +100,7 @@ a semiprime number.
 
 To compile this test, run:
 
-  make preimage_blockchain_ring_sis
+  `make preimage_blockchain_ring_sis`
 
 And then run the executable "preimage_blockchain_ring_sis". This
 program will compute random 1MB blocks and will compute how long it
@@ -120,7 +120,7 @@ long it takes to redact a block using this construction.
 
 To compile this test, run:
 
-  make preimage_blockchain_ntru
+  `make preimage_blockchain_ntru`
 
 And then run the program "preimage_blockchain_ntru". This program will
 compute random 1MB blocks and will compute how long it takes to

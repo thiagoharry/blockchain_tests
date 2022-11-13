@@ -41,7 +41,7 @@ void shake(unsigned char *string, size_t size, unsigned char *digest){
 }
 
 int main(int argc, char **argv){
-  int i, j;
+  int i;
   ssize_t ret, ret2;
   struct eval_key ek;
   struct trap_key tk;
@@ -76,9 +76,9 @@ int main(int argc, char **argv){
     mpz_export (&(shake_msg[count]), &count2, 1, 1, 0, 0, rnd1.value); // Concatenate rnd to the result
     shake(shake_msg, count + count2, shake_digest); // And compute the final digest 
     TIMER_END();
-    for(j =0; j < shake_digest_size; j ++)
-      printf("%04x", shake_digest[j]);
-    printf("\n");
+    //for(j =0; j < shake_digest_size; j ++)
+    //  printf("%04x", shake_digest[j]);
+    //printf("\n");
   }
   TIMER_RESULT("Computing hash on 1MB Block:");
   /* TIMER */

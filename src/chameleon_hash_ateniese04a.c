@@ -74,7 +74,7 @@ void chameleon_hash_init_sysparams(const unsigned int security_bits,
   if(security_bits == 128){
     sys -> curve_name = NID_secp256k1;
     sys -> internal_digest_size = SHA256_DIGEST_LENGTH;
-  } // 160 é o mínimo! - 320 bits de ordem
+  }
   else if(security_bits == 166){
     sys -> curve_name = NID_secp384r1;
     sys -> internal_digest_size = 48;
@@ -84,7 +84,6 @@ void chameleon_hash_init_sysparams(const unsigned int security_bits,
   if(sys -> curve == NULL)
     fprintf(stderr, "ERROR: Failed to generate curve.\n");
   EC_GROUP_get_order(sys -> curve, sys -> order, sys -> ctx);
-  printf("ORDER bytes: %d\n", BN_num_bytes(sys -> order));
 }
 
 

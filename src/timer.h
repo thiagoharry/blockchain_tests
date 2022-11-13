@@ -21,7 +21,7 @@ static int _i = 0;
     unsigned long _dif_squared = 0;					\
     for(_i = 0; _i < NTESTS; _i ++)						\
       _dif_squared += (measures[_i] - mean) * (measures[_i] - mean);	\
-    printf("%s: %.6fs ± %.6fs\n", _a, 0.000001 * mean,			\
+    printf("%s: %.6f seconds  (σ=%.6f seconds)\n", _a, 0.000001 * mean,			\
 	   0.000001 * (sqrt(((double) _dif_squared) / (double) (NTESTS-1)))); \
     _i = t_sum = 0;							\
   }

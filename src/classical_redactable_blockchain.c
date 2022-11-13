@@ -26,34 +26,8 @@ Redacting  1MB Block:: 0.005488s ± 0.000739s
 #define NTESTS 1000 // Number of times we measure each function
 #include "timer.h"
 
-
-#define NTESTS 1000 // Number of times we measure each function
-#include "timer.h"
-
-// COmpile with -lcrypto
-
 #define BLOCK_SIZE (1024 * 1024)
 
-/*void hash(unsigned char *string, size_t size, unsigned char *digest){
-  SHA256_CTX sha256;
-  SHA256_Init(&sha256);
-  SHA256_Update(&sha256, string, size);
-  SHA256_Final(digest, &sha256);
-  }*/
-
-/*void shake256(unsigned char *string, size_t size, unsigned char *digest,
-	      size_t digest_size){
-  EVP_MD_CTX *mdctx;
-  if((mdctx = EVP_MD_CTX_new()) == NULL)
-    exit(1);
-  if(1 != EVP_DigestInit_ex(mdctx, EVP_shake256(), NULL))
-    exit(1);
-  if(1 != EVP_DigestUpdate(mdctx, string, size))
-    exit(1);
-  if(1 != EVP_DigestFinalXOF(mdctx, digest, digest_size))
-    exit(1);
-  EVP_MD_CTX_free(mdctx);
-  }*/
 
 int main(int argc, char **argv){
   int i;
@@ -69,7 +43,7 @@ int main(int argc, char **argv){
   struct randomness rnd1, rnd2;
   struct digest dgt, dgt2;
   //shake_digest = (unsigned char *) malloc(shake_digest_size);
-  chameleon_hash_init_sysparams(142, &sys);
+  chameleon_hash_init_sysparams(166, &sys);
   //chameleon_hash_init_message(&sys, &msg1);
   //chameleon_hash_init_message(&sys, &msg2);
   chameleon_hash_keygen(&sys, &ek, &tk);
@@ -92,9 +66,6 @@ int main(int argc, char **argv){
     size = BN_num_bytes(dgt.value);
     hash(buffer, size, digest);
     TIMER_END();
-    //for(j =0; j < shake_digest_size; j ++)
-    //  printf("%04x", shake_digest[j]);
-    //printf("\n");
   }
   TIMER_RESULT("Computing hash on 1MB Block:");
   

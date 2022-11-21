@@ -56,9 +56,9 @@ secret_coin_redactable_blockchain: src/chameleon_hash_derler20.c src/secret_coin
 	$(CC) -g -Wall -O2 -c src/natural.c
 	$(CC) -g -Wall -O2 -c -include src/chameleon_hash_derler20.c src/secret_coin_redactable_blockchain.c
 	$(CC) -g -Wall -O2 natural.o secret_coin_redactable_blockchain.o -o secret_coin_redactable_blockchain -lgmp -lm -lcrypto
-classical_redactable_blockchain: src/chameleon_hash_ateniese04a.c src/classical_redactable_blockchain.c
+traditional_redactable_blockchain: src/chameleon_hash_ateniese04a.c src/classical_redactable_blockchain.c
 	$(CC) -g -Wall -O2 -c -include src/chameleon_hash_ateniese04a.c src/classical_redactable_blockchain.c
-	$(CC) -g -Wall -O2  classical_redactable_blockchain.o -o classical_redactable_blockchain -lm -lcrypto
+	$(CC) -g -Wall -O2  classical_redactable_blockchain.o -o traditional_redactable_blockchain -lm -lcrypto
 krawczyk98a:
 	$(CC) -g -Wall -O2 -c natural.c
 	$(CC) -g -Wall -O2 -c -include chameleon_hash_krawczyk98a.c test_preimage_chameleon_hash.c

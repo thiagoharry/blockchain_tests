@@ -129,6 +129,9 @@ redactable blockchain using our paper's construction using a
 traditional chameleon hash based on Ring-SIS assumption and also how
 long it takes to redact a block using this construction.
 
+OBS: This was originally built using Palisade library, commit 09dc2531e9aaa02cdfd1798ecf9ff45a2324e9bc.
+(https://gitlab.com/palisade/palisade-release)
+
 ## Our Proposed Blockchain with Post-Quantum Chameleon Hash based on Ring-SIS + NTRU Assumptions
 
 To compile this test, run:
